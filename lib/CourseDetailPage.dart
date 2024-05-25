@@ -1,0 +1,145 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:flutter/material.dart';
+import './data/courses.dart';
+
+class CourseDetailPage extends StatelessWidget {
+  final int course_id;
+  final String course_code;
+  final String course_name;
+  final int questions;
+
+  CourseDetailPage(
+      {required this.course_id,
+      required this.course_code,
+      required this.course_name,
+      required this.questions});
+
+  @override
+  Widget build(BuildContext context) {
+    // Find the selected course based on course_id
+    final selectedCourse =
+        courses.firstWhere((course) => course["course_id"] == course_id);
+
+    // Get the question list from the selected course
+    final questionList = selectedCourse["question_list"] as List?;
+
+    if (questionList != null) {
+      return Scaffold(
+        appBar: AppBar(
+            // title: Text(course_name),
+            ),
+        body: ListView(
+          children: [
+            Text(
+              course_name,
+              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.right,
+            ),
+            SizedBox(width: 8.0, height: 8.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(Icons.my_library_books_outlined),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Syllabus",
+                    style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                  ),
+                ),
+                SizedBox(width: 16, height: 2),
+                Text(
+                  course_code.toUpperCase(),
+                  style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                  textAlign: TextAlign.right, // Customize as needed
+                ),
+              ],
+            ),
+            SizedBox(width: 8.0, height: 8.0),
+            
+            Text("Past Questions",
+            style: TextStyle(
+              fontSize: 22.0, fontWeight: FontWeight.bold
+            ),),
+            
+// buttons to filter long, short and v-short qns
+            Row(
+              children: [
+                ElevatedButton(onPressed: () => {}, child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Long"),
+                )),
+                ElevatedButton(onPressed: () => {}, child: Text("Short")),
+                ElevatedButton(onPressed: () => {}, child: Text("Very short")),
+              ],
+            ),
+
+            // section for generating qns from list            
+            ListView.builder(
+              itemCount: questionList.length, // Use question list length
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                final question = questionList[index];
+                final questionText = question["question"];
+                final appearedIn = question["appeared_in"];
+
+                // You can further customize the display of questions here
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Flexible(
+                        flex: 5,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.only(
+                              topLeft:
+                                  Radius.circular(0.0), // No radius on top left
+                              topRight:
+                                  Radius.circular(20.0), // Adjust as desired
+                              bottomLeft: Radius.circular(
+                                  20.0), // No radius on bottom right
+                              bottomRight:
+                                  Radius.circular(0.0), // Adjust as desired
+                            ),
+                          ),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(16.0, 8.0, 8.0, 8.0),
+                            child: Text(questionText),
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 16.0, 0),
+                          child: Text(
+                            appearedIn[0],
+                            textAlign: TextAlign.right,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      );
+    } else {
+      // Handle the case where questionList is null (e.g., display message)
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(course_name),
+        ),
+        body: Center(
+          child: Text('No questions found for this course'),
+        ),
+      );
+    }
+  }
+}
