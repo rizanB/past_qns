@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './CourseDetailPage.dart';
 import './data/courses.dart';
+// import './test.dart';
 
 class CourseCard extends StatelessWidget {
   final int course_id;
@@ -91,7 +92,7 @@ class MyApp extends StatelessWidget {
           crossAxisCount: 2, // Two columns
           mainAxisSpacing: 10.0, // Spacing between cards
           crossAxisSpacing: 10.0, // Spacing between columns
-          childAspectRatio: 0.7, // Adjust aspect ratio as needed
+          childAspectRatio: 1.8, // Adjust aspect ratio as needed
           padding: const EdgeInsets.all(16.0), // Add padding around the grid
           children: List.generate(courses.length, (index) {
            

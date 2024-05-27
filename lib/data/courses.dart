@@ -20,13 +20,27 @@ const courses = [
         "question":
             "Real-time PCR has several advantages over conventional PCR, one being its specificity on amplicon detection. Explain how this is achieved with focus on its principle. Also, illustrate a PCR that can be carried out in a place without electricity, using fire as a heat source.",
         "appeared_in": ["Internal, 2079"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question":
+            "vshort The cost and slow processing of Sanger sequencing has been overcome with more advanced technologies. Describe the various advances made in this technology with their individual underlying principle.",
+        "appeared_in": ["Internal, 2079"]
+      },
+      {
+        "id": 1,
+        "type": "short",
+        "question":
+            "short The cost and slow processing of Sanger sequencing has been overcome with more advanced technologies. Describe the various advances made in this technology with their individual underlying principle.",
+        "appeared_in": ["Internal, 2079"]
       }
     ]
   },
   {
     "course_name": "Molecular Cell Biology",
     "course_id": 2,
-    "course_code": "bt-344",
+    "course_code": "bt-401",
     "questions": 85,
     "question_list": [
       {
