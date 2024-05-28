@@ -593,7 +593,49 @@ const courses = [
         "id": 1,
         "type": "long",
         "question":
+            "What are the roles of micro-organisms in food? How is miso prepared? Write about its health benefits.",
+        "appeared_in": ["Internal, 2080"]
+      },
+            {
+        "id": 1,
+        "type": "long",
+        "question":
+            "What is Murcha? Describe the process of making Murcha. What is the role of Mana in Chhang production?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "long",
+        "question":
             "Define hazard, critical control points and critical limits. Describe the major principles applicable for the production of safe milk products.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "long",
+        "question":
+            "What are the four functional food categories? How does symbiotic food promote human health?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "long",
+        "question":
+            "What are the effects of fermentation on quality attributes of meat products? Why are fermented foods promising food trends for the future?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "long",
+        "question":
+            "What is hurdle technology? Describe the different strategies of hurdle technology in food preservation.",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "long",
+        "question":
+            "What is Vitamin B2? Write in detail on industrial production of Vitamin B2. Write in brief on the metabolic enhancement protocol adopted for enhancement of vitamin B2 production.",
         "appeared_in": ["Preboard, 2080"]
       },
       {
@@ -617,6 +659,35 @@ const courses = [
             "What are the uses of lysine in food sector? Describe the industrial production of lysine. How can you overproduce lysine from Corynebacterium glutamicum?",
         "appeared_in": ["Preboard, 2080"]
       },
+      {
+        "id": 1,
+        "type": "short",
+        "question":
+            "Make a flow chart for the preparation of tama.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "short",
+        "question":
+            "How do you enhance the production of citric acid? Write its metabolic pathway.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "short",
+        "question":
+            "How is glutamic acid purified?",
+        "appeared_in": ["Internal, 2080"]
+      },
+
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "What biochemical changes occur during Jaand making?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+
       {
         "id": 1,
         "type": "short",
@@ -665,10 +736,36 @@ const courses = [
       },
       {
         "id": 1,
+        "type": "short",
+        "question":
+            "Write in brief on importance of starter culture.",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "What are the two methods through which foods are fermented?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Write any two uses of polylactic acid.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Elucidate the importance of hops in beer production.",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
         "type": "very-short",
         "question": "What is the potential health benefit of Kefir?",
         "appeared_in": ["Preboard, 2080"]
       },
+      
       {
         "id": 1,
         "type": "very-short",
@@ -714,6 +811,36 @@ const courses = [
         "id": 1,
         "type": "very-short",
         "question": "What are the metabolic enhancements done for the production of riboflavin?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "How does retinol become accessible in human body?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "What is CTC tea?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Make a flow chart for the preparation of tempeh.",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "What is the role of Saccharomyces cerevisae in production of Vodka?",
+        "appeared_in": ["Preboard, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Point out the process of Manapu preparation.",
         "appeared_in": ["Preboard, 2080"]
       },
     ]
