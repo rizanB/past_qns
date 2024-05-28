@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:past_qns/constants/colors.dart';
 import './data/courses.dart';
 
 class CourseDetailPage extends StatefulWidget {
@@ -24,6 +25,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
   Map<String, dynamic> selectedCourse = {};
   List<dynamic> questionList = [];
 
+
   @override
   void initState() {
     // Find the selected course based on course_id
@@ -32,6 +34,10 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
     // Get the question list from the selected course
     questionList = selectedCourse["question_list"];
     super.initState();
+  }
+
+  void changeFilterToSelected(String questionType){
+    selectedFilter = questionType; 
   }
 
   List<dynamic> filterQuestionFromType(String type) {
@@ -45,8 +51,8 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
     if (questionList.isNotEmpty) {
       return Scaffold(
         appBar: AppBar(
-            title: Text("Past Questions"),
-            ),
+          title: Text("Past Questions"),
+        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 8.0),
           child: ListView(
@@ -56,7 +62,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                 style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.right,
               ),
-              
+
               SizedBox(width: 8.0, height: 8.0),
 
               Row(
@@ -100,9 +106,14 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                         onPressed: () {
                           setState(() {
                             filterQuestionFromType('long');
+                            changeFilterToSelected('long');
                           });
                         },
                         child: Text("Long"),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: selectedFilter == 'long'
+                                ? PRIMARY_BUTTON_BACKGROUND
+                                : null),
                       ),
                       SizedBox(
                         width: 16.0,
@@ -111,9 +122,14 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                           onPressed: () {
                             setState(() {
                               filterQuestionFromType('short');
+                              changeFilterToSelected('short');
                             });
                           },
-                          child: Text("Short")),
+                          child: Text("Short"),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: selectedFilter == 'short'
+                                  ? PRIMARY_BUTTON_BACKGROUND
+                                  : null)),
                       SizedBox(
                         width: 16.0,
                       ),
@@ -121,9 +137,14 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                           onPressed: () {
                             setState(() {
                               filterQuestionFromType('very-short');
+                              changeFilterToSelected('very-short');
                             });
                           },
-                          child: Text("Very short")),
+                          child: Text("Very short"),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: selectedFilter == 'very-short'
+                                  ? PRIMARY_BUTTON_BACKGROUND
+                                  : null)),
                     ],
                   ),
                 ),
@@ -139,7 +160,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                       final question = questionList[index];
                       final questionText = question["question"];
                       final appearedIn = question["appeared_in"];
-                  
+
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -156,8 +177,8 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                         20.0), // Adjust as desired
                                     bottomLeft: Radius.circular(
                                         20.0), // No radius on bottom right
-                                    bottomRight:
-                                        Radius.circular(0.0), // Adjust as desired
+                                    bottomRight: Radius.circular(
+                                        0.0), // Adjust as desired
                                   ),
                                 ),
                                 child: Padding(
@@ -170,7 +191,8 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                             Flexible(
                               flex: 1,
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                                padding:
+                                    const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
                                 child: Text(
                                   appearedIn[0],
                                   textAlign: TextAlign.right,
