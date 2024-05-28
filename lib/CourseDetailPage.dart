@@ -26,18 +26,18 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
 
   @override
   void initState() {
- // Find the selected course based on course_id
-     selectedCourse =
-        courses.firstWhere((course) => course["course_id"] == widget.course_id);  
-           // Get the question list from the selected course
-     questionList = selectedCourse["question_list"];
-      super.initState();
+    // Find the selected course based on course_id
+    selectedCourse =
+        courses.firstWhere((course) => course["course_id"] == widget.course_id);
+    // Get the question list from the selected course
+    questionList = selectedCourse["question_list"];
+    super.initState();
   }
 
   List<dynamic> filterQuestionFromType(String type) {
-    return questionList = selectedCourse["question_list"].where((element) =>
-       element['type'] == type
-  ).toList();
+    return questionList = selectedCourse["question_list"]
+        .where((element) => element['type'] == type)
+        .toList();
   }
 
   @override
@@ -45,127 +45,147 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
     if (questionList.isNotEmpty) {
       return Scaffold(
         appBar: AppBar(
-            // title: Text(course_name),
+            title: Text("Past Questions"),
             ),
-        body: ListView(
-          children: [
-            Text(
-              widget.course_name,
-              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.right,
-            ),
-            SizedBox(width: 8.0, height: 8.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(Icons.my_library_books_outlined),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Syllabus",
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 8.0),
+          child: ListView(
+            children: [
+              Text(
+                widget.course_name,
+                style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.right,
+              ),
+              
+              SizedBox(width: 8.0, height: 8.0),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(Icons.my_library_books_outlined),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Syllabus",
+                      style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                    ),
+                  ),
+                  SizedBox(width: 16, height: 2),
+                  Text(
+                    widget.course_code.toUpperCase(),
                     style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                    textAlign: TextAlign.right, // Customize as needed
+                  ),
+                ],
+              ),
+              SizedBox(width: 8.0, height: 8.0),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Past Questions",
+                  style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+                ),
+              ),
+
+              // buttons to filter long, short and v-short qns
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            filterQuestionFromType('long');
+                          });
+                        },
+                        child: Text("Long"),
+                      ),
+                      SizedBox(
+                        width: 16.0,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              filterQuestionFromType('short');
+                            });
+                          },
+                          child: Text("Short")),
+                      SizedBox(
+                        width: 16.0,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              filterQuestionFromType('very-short');
+                            });
+                          },
+                          child: Text("Very short")),
+                    ],
                   ),
                 ),
-                SizedBox(width: 16, height: 2),
-                Text(
-                  widget.course_code.toUpperCase(),
-                  style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
-                  textAlign: TextAlign.right, // Customize as needed
-                ),
-              ],
-            ),
-            SizedBox(width: 8.0, height: 8.0),
+              ),
 
-            Text(
-              "Past Questions",
-              style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
-            ),
-
-// buttons to filter long, short and v-short qns
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                    filterQuestionFromType('long');
-                    });
-                  },
-                  child: Text("Long"),
-                ),
-                ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                      filterQuestionFromType('short');
-                      });
-
-                    },
-                    child: Text("Short")),
-                ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                     filterQuestionFromType('very-short');
-                      });
-                    },
-                    child: Text("Very short")),
-              ],
-            ),
-
-            // section for generating qns from list
-            StatefulBuilder(
-              builder: (context, setState) => ListView.builder(
-                itemCount: questionList.length, // Use question list length
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  final question = questionList[index];
-                  final questionText = question["question"];
-                  final appearedIn = question["appeared_in"];
-
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Flexible(
-                            flex: 5,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey[100],
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(
-                                      0.0), // No radius on top left
-                                  topRight: Radius.circular(
-                                      20.0), // Adjust as desired
-                                  bottomLeft: Radius.circular(
-                                      20.0), // No radius on bottom right
-                                  bottomRight:
-                                      Radius.circular(0.0), // Adjust as desired
+              // section for generating qns from list
+              StatefulBuilder(
+                builder: (context, setState) => SingleChildScrollView(
+                  child: ListView.builder(
+                    itemCount: questionList.length, // Use question list length
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      final question = questionList[index];
+                      final questionText = question["question"];
+                      final appearedIn = question["appeared_in"];
+                  
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Flexible(
+                              flex: 5,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[100],
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(
+                                        0.0), // No radius on top left
+                                    topRight: Radius.circular(
+                                        20.0), // Adjust as desired
+                                    bottomLeft: Radius.circular(
+                                        20.0), // No radius on bottom right
+                                    bottomRight:
+                                        Radius.circular(0.0), // Adjust as desired
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      16.0, 8.0, 8.0, 8.0),
+                                  child: Text(questionText),
                                 ),
                               ),
+                            ),
+                            Flexible(
+                              flex: 1,
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(
-                                    16.0, 8.0, 8.0, 8.0),
-                                child: Text(questionText),
+                                padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
+                                child: Text(
+                                  appearedIn[0],
+                                  textAlign: TextAlign.right,
+                                ),
                               ),
                             ),
-                          ),
-                          Flexible(
-                            flex: 1,
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 0, 16.0, 0),
-                              child: Text(
-                                appearedIn[0],
-                                textAlign: TextAlign.right,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  
-                },
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     } else {
