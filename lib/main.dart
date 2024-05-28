@@ -38,7 +38,7 @@ class CourseCard extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: IntrinsicHeight(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(32.0, 0, 32.0, 0),
+              padding: const EdgeInsets.all(0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,

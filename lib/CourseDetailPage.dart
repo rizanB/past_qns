@@ -54,7 +54,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Past Questions"),
+        // title: Text("Past Questions"),
       ),
       body: questionList.isNotEmpty
           ? Padding(
@@ -109,6 +109,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                     ? 'Very Short'
                                     : element),
                               ),
+
                             );
                           }),
                         ],

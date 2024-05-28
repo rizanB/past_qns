@@ -46,6 +46,7 @@ class QuestionCard extends StatelessWidget {
                   const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
               child: Text(
                 appearedIn[0],
+                style: const TextStyle(fontSize: 12.0),
                 textAlign: TextAlign.right,
               ),
             ),
