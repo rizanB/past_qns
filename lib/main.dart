@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './CourseDetailPage.dart';
+import 'course_detail_page.dart';
 import './data/courses.dart';
 // import './test.dart';
 
