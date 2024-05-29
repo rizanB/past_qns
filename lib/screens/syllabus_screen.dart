@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:past_qns/widgets/course_heading_section.dart';
-// import './data/courses.dart';
 
 class SyllabusPage extends StatelessWidget {
-  const SyllabusPage({super.key});
+  final String courseSyllabus;
+  final String courseName;
+  final String courseCode;
+
+  const SyllabusPage(
+      {super.key,
+      required this.courseName,
+      required this.courseCode,
+      required this.courseSyllabus});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +19,10 @@ class SyllabusPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
         child: ListView(
-          children: const [
-            CourseHeadingSection(courseName: "test", courseCode: "test"),
+          children: [
+            CourseHeadingSection(
+                courseName: courseName, courseCode: courseCode),
+            Text(courseSyllabus),
           ],
         ),
       ),

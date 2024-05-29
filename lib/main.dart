@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'course_detail_page.dart';
+import 'package:past_qns/screens/syllabus_screen.dart';
+import 'screens/course_detail_screen.dart';
 import './data/courses.dart';
-// import './test.dart';
 
 class CourseCard extends StatelessWidget {
   final int course_id;
@@ -10,7 +10,8 @@ class CourseCard extends StatelessWidget {
   final int questions;
 
   const CourseCard(
-      {super.key, required this.course_id,
+      {super.key,
+      required this.course_id,
       required this.course_code,
       required this.course_name,
       required this.questions});
@@ -43,7 +44,6 @@ class CourseCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-
                   Flexible(
                     flex: 1,
                     child: Padding(
@@ -57,9 +57,7 @@ class CourseCard extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   const SizedBox(height: 6.0),
-
                   Row(
                     children: [
                       const Spacer(),
@@ -70,6 +68,46 @@ class CourseCard extends StatelessWidget {
                         style: const TextStyle(
                             fontSize: 12.0), // Adjust question text size
                       ),
+                    ],
+                  ),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+
+                    children: [
+                      const Icon(Icons.my_library_books_outlined),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextButton(
+                          onPressed: () {
+                            final selectedCourse = courses.firstWhere(
+                                (course) =>
+                                    course['course_id'] ==
+                                    course_id); // Find the selected course
+                            final courseSyllabus = selectedCourse['syllabus']
+                                .toString(); // Access syllabus data
+
+                            final courseName =
+                                selectedCourse["course_name"].toString();
+
+                            final courseCode =
+                                selectedCourse["course_code"].toString();
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SyllabusPage(
+                                  courseSyllabus: courseSyllabus,
+                                  courseName: courseName,
+                                  courseCode: courseCode,
+                                ),
+                              ),
+                            );
+                          },
+                          child: Text("Syllabus",
+                              style: TextStyle(
+                                  fontSize: 14.0, color: Colors.grey[600])),
+                        ),
+                      )
                     ],
                   ),
                 ],

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:past_qns/constants/colors.dart';
 import 'package:past_qns/widgets/course_heading_section.dart';
 import 'package:past_qns/widgets/question_card.dart';
-import './data/courses.dart';
+import '../data/courses.dart';
 
 class CourseDetailPage extends StatefulWidget {
   final int course_id;

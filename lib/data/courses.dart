@@ -6,6 +6,7 @@ const courses = [
     "course_id": 1,
     "course_code": "bt-612",
     "course_icon": "medical_services",
+    "syllabus": "syllabus for medical and pharma...",
     "questions": 100,
     "question_list": [
       {
@@ -312,6 +313,7 @@ const courses = [
     "course_name": "Agriculture Biotechnology",
     "course_id": 2,
     "course_code": "bt-614",
+    "syllabus": "syllabus for agri...",
     "questions": 85,
     "question_list": [
       {
@@ -567,6 +569,7 @@ const courses = [
     "course_name": "Animal Biotechnology",
     "course_id": 3,
     "course_code": "bt-344",
+    "syllabus": "syllabus for animal ...",
     "questions": 78,
     "question_list": [
       {
@@ -587,6 +590,7 @@ const courses = [
     "course_name": "Food Biotechnology",
     "course_id": 4,
     "course_code": "bt-611",
+    "syllabus": "syllabus for food...",
     "questions": 92,
     "question_list": [
       {
@@ -596,7 +600,7 @@ const courses = [
             "What are the roles of micro-organisms in food? How is miso prepared? Write about its health benefits.",
         "appeared_in": ["Internal, 2080"]
       },
-            {
+      {
         "id": 1,
         "type": "long",
         "question":
@@ -662,8 +666,7 @@ const courses = [
       {
         "id": 1,
         "type": "short",
-        "question":
-            "Make a flow chart for the preparation of tama.",
+        "question": "Make a flow chart for the preparation of tama.",
         "appeared_in": ["Internal, 2080"]
       },
       {
@@ -676,18 +679,15 @@ const courses = [
       {
         "id": 1,
         "type": "short",
-        "question":
-            "How is glutamic acid purified?",
+        "question": "How is glutamic acid purified?",
         "appeared_in": ["Internal, 2080"]
       },
-
       {
         "id": 1,
         "type": "very-short",
         "question": "What biochemical changes occur during Jaand making?",
         "appeared_in": ["Preboard, 2080"]
       },
-
       {
         "id": 1,
         "type": "short",
@@ -737,14 +737,14 @@ const courses = [
       {
         "id": 1,
         "type": "short",
-        "question":
-            "Write in brief on importance of starter culture.",
+        "question": "Write in brief on importance of starter culture.",
         "appeared_in": ["Preboard, 2080"]
       },
       {
         "id": 1,
         "type": "very-short",
-        "question": "What are the two methods through which foods are fermented?",
+        "question":
+            "What are the two methods through which foods are fermented?",
         "appeared_in": ["Internal, 2080"]
       },
       {
@@ -765,11 +765,11 @@ const courses = [
         "question": "What is the potential health benefit of Kefir?",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
-        "question": "What is the effect of pH on fermentative production of citric acid from Aspergillus niger?",
+        "question":
+            "What is the effect of pH on fermentative production of citric acid from Aspergillus niger?",
         "appeared_in": ["Preboard, 2080"]
       },
       {
@@ -778,39 +778,36 @@ const courses = [
         "question": "Define prebiotic with examples.",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
-        "question": "Write any two high temperature food preservation techniques.",
+        "question":
+            "Write any two high temperature food preservation techniques.",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
         "question": "What is pneumatic conveying system?",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
         "question": "What are the strains present in kimchi?",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
         "question": "How sake differs from gin?",
         "appeared_in": ["Preboard, 2080"]
       },
-      
       {
         "id": 1,
         "type": "very-short",
-        "question": "What are the metabolic enhancements done for the production of riboflavin?",
+        "question":
+            "What are the metabolic enhancements done for the production of riboflavin?",
         "appeared_in": ["Preboard, 2080"]
       },
       {
@@ -834,7 +831,8 @@ const courses = [
       {
         "id": 1,
         "type": "very-short",
-        "question": "What is the role of Saccharomyces cerevisae in production of Vodka?",
+        "question":
+            "What is the role of Saccharomyces cerevisae in production of Vodka?",
         "appeared_in": ["Preboard, 2080"]
       },
       {
@@ -849,6 +847,7 @@ const courses = [
     "course_name": "Biostatistics and Research methodology",
     "course_id": 5,
     "course_code": "bt-616",
+    "syllabus": "syllabus for biostat...",
     "questions": 50,
     "question_list": [
       {
@@ -903,6 +902,7 @@ const courses = [
     "course_name": "IPR, Biosafety and Bioethics",
     "course_id": 6,
     "course_code": "bt-617",
+    "syllabus": "syllabus for ipr...",
     "questions": 50,
     "question_list": [
       {
@@ -1002,6 +1002,7 @@ const courses = [
     "course_name": "Entrepreneurship Development",
     "course_id": 7,
     "course_code": "bt-618",
+    "syllabus": "syllabus for entre.....",
     "questions": 50,
     "question_list": [
       {

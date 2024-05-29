@@ -23,15 +23,6 @@ class CourseHeadingSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            const Icon(Icons.my_library_books_outlined),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Syllabus",
-                style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
-              ),
-            ),
-            const SizedBox(width: 16, height: 2),
             Text(
               courseCode,
               style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
