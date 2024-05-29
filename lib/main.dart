@@ -9,8 +9,8 @@ class CourseCard extends StatelessWidget {
   final String course_name;
   final int questions;
 
-  CourseCard(
-      {required this.course_id,
+  const CourseCard(
+      {super.key, required this.course_id,
       required this.course_code,
       required this.course_name,
       required this.questions});
@@ -38,21 +38,11 @@ class CourseCard extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: IntrinsicHeight(
             child: Padding(
-              padding: const EdgeInsets.all(0),
+              padding: const EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Center(
-                  //   child: Container(
-                  //     // width: 60.0, // Adjust width as needed
-                  //     // height: 60.0, // Adjust height as needed
-                  //     // child: Icon(Icons.medical_information,
-                  //     // size: 60),
-                  //   ),
-                  // ),
-
-                  const SizedBox(height: 8.0),
 
                   Flexible(
                     flex: 1,
@@ -61,20 +51,14 @@ class CourseCard extends StatelessWidget {
                       child: Text(
                         course_name,
                         textAlign: TextAlign.right,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ),
 
-                  // Expanded(
-                  //   child: Text(
-                  //     course_name,
-                  //     style: const TextStyle(fontSize: 14.0), // Adjust font size as needed
-                  //     maxLines: 2,
-                  //     overflow: TextOverflow.ellipsis,
-                  //   ),
-                  // ),
-
-                  const SizedBox(height: 4.0),
+                  const SizedBox(height: 6.0),
 
                   Row(
                     children: [
@@ -99,10 +83,12 @@ class CourseCard extends StatelessWidget {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -113,23 +99,22 @@ class MyApp extends StatelessWidget {
               style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
         ),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: GridView.count(
             crossAxisCount: 2, // Two columns
             mainAxisSpacing: 10.0, // Spacing between cards
-            crossAxisSpacing: 10.0, // Spacing between columns
-            // childAspectRatio: 1.8, // Adjust aspect ratio as needed
-            padding: const EdgeInsets.all(16.0), // Add padding around the grid
+            crossAxisSpacing: 8.0, // Spacing between columns
+            padding: const EdgeInsets.all(12.0), // Add padding around the grid
             children: List.generate(courses.length, (index) {
-              final course_id = courses[index]["course_id"] as int;
-              final course_code = courses[index]["course_code"] as String;
-              final course_name = courses[index]["course_name"] as String;
+              final courseId = courses[index]["course_id"] as int;
+              final courseCode = courses[index]["course_code"] as String;
+              final courseName = courses[index]["course_name"] as String;
               final questions = courses[index]["questions"] as int;
 
               return CourseCard(
-                course_id: course_id,
-                course_code: course_code,
-                course_name: course_name,
+                course_id: courseId,
+                course_code: courseCode,
+                course_name: courseName,
                 questions: questions,
               );
             }),

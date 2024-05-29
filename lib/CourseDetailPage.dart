@@ -12,8 +12,8 @@ class CourseDetailPage extends StatefulWidget {
   final String course_name;
   final int questions;
 
-  CourseDetailPage(
-      {required this.course_id,
+  const CourseDetailPage(
+      {super.key, required this.course_id,
       required this.course_code,
       required this.course_name,
       required this.questions});
