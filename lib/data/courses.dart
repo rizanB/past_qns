@@ -5,8 +5,25 @@ const courses = [
     "course_name": "Medical and Pharmaceutical Biotechnology",
     "course_id": 1,
     "course_code": "bt-612",
+    "course_credit": 3,
     "course_icon": "medical_services",
-    "syllabus": "syllabus for medical and pharma...",
+    "course_syllabus": [
+      {
+        'topic': "Molecular and medical genetics",
+        'content': "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        'hours': 5
+      },
+      {
+        'topic' : "Molecular oncology",
+        'content': "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        'hours': 6
+      },
+      {
+        'topic': "Microbial diseases in humans",
+        'content':  "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        'hours': 9
+      }
+    ],
     "questions": 100,
     "question_list": [
       {
@@ -313,7 +330,23 @@ const courses = [
     "course_name": "Agriculture Biotechnology",
     "course_id": 2,
     "course_code": "bt-614",
-    "syllabus": "syllabus for agri...",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 85,
     "question_list": [
       {
@@ -569,7 +602,23 @@ const courses = [
     "course_name": "Animal Biotechnology",
     "course_id": 3,
     "course_code": "bt-344",
-    "syllabus": "syllabus for animal ...",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 78,
     "question_list": [
       {
@@ -590,7 +639,23 @@ const courses = [
     "course_name": "Food Biotechnology",
     "course_id": 4,
     "course_code": "bt-611",
-    "syllabus": "syllabus for food...",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 92,
     "question_list": [
       {
@@ -847,7 +912,23 @@ const courses = [
     "course_name": "Biostatistics and Research methodology",
     "course_id": 5,
     "course_code": "bt-616",
-    "syllabus": "syllabus for biostat...",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 50,
     "question_list": [
       {
@@ -902,7 +983,23 @@ const courses = [
     "course_name": "IPR, Biosafety and Bioethics",
     "course_id": 6,
     "course_code": "bt-617",
-    "syllabus": "syllabus for ipr...",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 50,
     "question_list": [
       {
@@ -1002,7 +1099,23 @@ const courses = [
     "course_name": "Entrepreneurship Development",
     "course_id": 7,
     "course_code": "bt-618",
-    "syllabus": "syllabus for entre.....",
+    "course_syllabus": [
+      [
+        "Molecular and medical genetics",
+        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
+        5
+      ],
+      [
+        "Molecular oncology",
+        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        6
+      ],
+      [
+        "Microbial diseases in humans",
+        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        9
+      ]
+    ],
     "questions": 50,
     "question_list": [
       {

@@ -71,8 +71,7 @@ class CourseCard extends StatelessWidget {
                     ],
                   ),
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const Icon(Icons.my_library_books_outlined),
                       Padding(
@@ -83,8 +82,8 @@ class CourseCard extends StatelessWidget {
                                 (course) =>
                                     course['course_id'] ==
                                     course_id); // Find the selected course
-                            final courseSyllabus = selectedCourse['syllabus']
-                                .toString(); // Access syllabus data
+
+                             // Access syllabus data
 
                             final courseName =
                                 selectedCourse["course_name"].toString();
@@ -96,7 +95,8 @@ class CourseCard extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => SyllabusPage(
-                                  courseSyllabus: courseSyllabus,
+                                  courseSyllabus:  selectedCourse[
+                                'course_syllabus'] as List<dynamic>,
                                   courseName: courseName,
                                   courseCode: courseCode,
                                 ),
