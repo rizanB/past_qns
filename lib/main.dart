@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:past_qns/screens/syllabus_screen.dart';
 import 'screens/course_detail_screen.dart';
 import './data/courses.dart';
+import 'screens/syllabus_screen.dart';
 
 class CourseCard extends StatelessWidget {
   final int course_id;
@@ -94,7 +94,7 @@ class CourseCard extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => SyllabusPage(
+                                builder: (context) => SyllabusScreen(
                                   courseSyllabus:  selectedCourse[
                                 'course_syllabus'] as List<dynamic>,
                                   courseName: courseName,
@@ -103,9 +103,9 @@ class CourseCard extends StatelessWidget {
                               ),
                             );
                           },
-                          child: Text("Syllabus",
+                          child: const Text("Syllabus",
                               style: TextStyle(
-                                  fontSize: 14.0, color: Colors.grey[600])),
+                                  fontSize: 14.0)),
                         ),
                       )
                     ],

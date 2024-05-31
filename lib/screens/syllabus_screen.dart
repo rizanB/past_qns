@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:past_qns/widgets/course_heading_section.dart';
+import 'package:past_qns/widgets/syllabus_topic_card.dart';
 
-class SyllabusPage extends StatelessWidget {
+class SyllabusScreen extends StatelessWidget {
   final List<dynamic> courseSyllabus;
   final String courseName;
   final String courseCode;
 
-  const SyllabusPage(
+  const SyllabusScreen(
       {super.key,
       required this.courseName,
       required this.courseCode,
@@ -16,70 +17,55 @@ class SyllabusPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
-        child: ListView(
-          children: [
-            CourseHeadingSection(
-                courseName: courseName, courseCode: courseCode),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                "Syllabus",
-                style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+      body: courseSyllabus.isNotEmpty
+          ? Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8.0,
+                vertical: 12.0,
               ),
+              child: ListView(
+                children: [
+                  CourseHeadingSection(
+                      courseName: courseName, courseCode: courseCode),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.my_library_books_outlined),
+                        SizedBox(
+                          width: 8.0,
+                        ),
+                        Text(
+                          "Syllabus",
+                          style: TextStyle(
+                              fontSize: 18.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ListView.builder(
+                    itemCount:
+                        courseSyllabus.length, // Use question list length
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      final topic = courseSyllabus[index]["topic"];
+                      final topicContent = courseSyllabus[index]["content"];
+                      int teachingHours = courseSyllabus[index]["hours"];
+
+                      return SyllabusTopicCard(
+                          topic: topic,
+                          topicContent: topicContent,
+                          teachingHours: teachingHours);
+                    },
+                  ),
+                ],
+              ),
+            )
+          : const Center(
+              child: Text('No questions found for this course'),
             ),
-            ListView.builder(
-                shrinkWrap: true,
-                itemCount: courseSyllabus.length,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (_, i) {
-                  final title = courseSyllabus[i];
-                  return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 12),
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: const BorderRadius.only(
-                            topLeft:
-                                Radius.circular(0.0), // No radius on top left
-                            topRight:
-                                Radius.circular(20.0), // Adjust as desired
-                            bottomLeft: Radius.circular(
-                                20.0), // No radius on bottom right
-                            bottomRight:
-                                Radius.circular(0.0), // Adjust as desired
-                          ),
-                        ),
-                        child: SizedBox(
-                          width: MediaQuery.sizeOf(context).width - 100,
-                          child: ListTile(
-                            title: Flexible(
-                              child: Text(
-                                title['topic'],
-                                style: const TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            subtitle: Text(title['content']),
-                          ),
-                        ),
-                      ),
-                      Text(
-                        '${title['hours']} hrs',
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  );
-                }),
-          ],
-        ),
-      ),
     );
   }
 }
