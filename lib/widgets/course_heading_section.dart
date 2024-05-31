@@ -14,17 +14,20 @@ class CourseHeadingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          courseName,
-          style: const TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.right,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
+            courseName,
+            style: const TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.right,
+          ),
         ),
-        const SizedBox(width: 8.0, height: 8.0),
+        // const SizedBox(width: 8.0, height: 4.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
                 courseCode.toUpperCase(),
                 style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
@@ -33,7 +36,7 @@ class CourseHeadingSection extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(width: 8.0, height: 8.0),
+        const SizedBox(width: 8.0, height: 4.0),
       ],
     );
   }
