@@ -770,21 +770,65 @@ const courses = [
     "course_id": 4,
     "course_code": "bt-611",
     "course_syllabus": [
-      [
-        "Molecular and medical genetics",
-        "Autosomal dominant disorders as example marfan's syndrome, achondroplasia. Autosomal recessive disorders as example cystic fibrosis,spinal muscular atrophy. Sex linked disorders as example muscular dystrophy,x linked hypophosphatemia. Other disorders as example down's syndrome, klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation based diseases",
-        5
-      ],
-      [
-        "Molecular oncology",
-        "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
-        6
-      ],
-      [
-        "Microbial diseases in humans",
-        "Molecular biology of pathogenesis of : HIV, flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
-        9
-      ]
+      {
+        'topic': "History and scope",
+        'content':
+            "History and cope of food biotechnology, Intrinsic and extrinsic factors that affect microbial growth",
+        'hours': 2
+      },
+      {
+        'topic': "Starter cultures",
+        'content':
+            "Introduction, Mixed and defined cultures, and microorganisms, Manufacture of cultures",
+        'hours': 3
+      },
+      {
+        'topic': "Production of microbial food ingredients/ products",
+        'content':
+            "Organic acids: citric acid, lactic acid, gluconic acid, Amino acids: L-glutamic acid, L-lysine, L-tryptophan, Vitamins: -carotene, vitamin B12, riboflavin, Misc.: SCP",
+        'hours': 10
+      },
+      {
+        'topic': "Technology of alcoholic beverages",
+        'content':
+            "Production of alcoholic non-distilled beverages: Wine (introduction, types, production), Beer (introduction, raw materials, malting, production), Jand, sake, b) Production of alcoholic distilled beverages, Raksi, whiskey, branby, rum, vodka, gin",
+        'hours': 7
+      },
+      {
+        'topic': "Food processing and quality",
+        'content':
+            "processing and quality, Postharvest operations: raw materials, cleaning, sorting and grading, peeling, blanching, Concept of HACCP",
+        'hours': 2
+      },
+      {
+        'topic': "Food preservation",
+        'content':
+            "Principles: physical and chemical and biological methods of food preservation, Concept of hurdle technology for food preservation",
+        'hours': 5
+      },
+      {
+        'topic': "Indigenous non-alcoholic fermented food products",
+        'content':
+            "Gundruk, sinki, kinema, mesu, pickle, yoghurt (dahi), jujudhau, Sauerkraut, natto, soyu, miso, tempeh, kimchi, idli, kafir, vinegar",
+        'hours': 6
+      },
+      {
+        'topic': "Tea processing technology",
+        'content': "Introduction, manufacture, chemistry, grading",
+        'hours': 3
+      },
+      {
+        'topic': "Functional foods",
+        'content':
+            "Pro-biotics — definition, functional properties, interaction with pre-biotics, health benefits, food products (yoghurt, curd, etc.) b) Pre-biotics — introduction, functions, sources, health benefits c) Phytochemicals — introduction, active components, health benefits, sources",
+        'hours': 6
+      },
+      {
+        'topic': "Fermented meat products",
+        'content':
+            "Introduction, Starter cultures and their role, Production of sausage, cured meat, etc., Quality and health benefits",
+        'hours': 3
+      },
     ],
     "questions": 92,
     "question_list": [
