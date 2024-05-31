@@ -23,10 +23,13 @@ class CourseHeadingSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Text(
-              courseCode,
-              style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
-              textAlign: TextAlign.right, // Customize as needed
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                courseCode.toUpperCase(),
+                style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                textAlign: TextAlign.right, // Customize as needed
+              ),
             ),
           ],
         ),

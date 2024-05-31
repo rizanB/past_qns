@@ -5,8 +5,58 @@ const courses = [
     "course_name": "Medical and Pharmaceutical Biotechnology",
     "course_id": 1,
     "course_code": "bt-612",
+    "course_credit": 3,
     "course_icon": "medical_services",
-    "syllabus": "syllabus for medical and pharma...",
+    "course_syllabus": [
+      {
+        'topic': "Molecular and medical genetics",
+        'content':
+            "Autosomal dominant disorders as example Marfan's syndrome, Achondroplasia. Autosomal recessive disorders as example Cystic fibrosis, Spinal muscular atrophy. Sex linked disorders as example Muscular dystrophy, X linked hypophosphatemia. Other disorders as example Down's syndrome, Klinefelters syndrome. Introduction to genetic diseases - Thallasaemia, Haemophiloia, Psoriasis, Parkinson's diseases, Alzheimer's disease. Introduction to Mitochondrial mutation-based diseases",
+        'hours': 5
+      },
+      {
+        'topic': "Molecular oncology",
+        'content':
+            "Types of tumors, predisposing factors, cellular changes involved in tumor formation, genes associated with cancer, methods of tumor detection, hormone and non hormonal model of cancer, immunotherapy",
+        'hours': 6
+      },
+      {
+        'topic': "Microbial diseases in humans",
+        'content':
+            "Molecular biology of pathogenesis of : HIV, Flu, Hepatitis viruses, Mycobacterium tuberculosis, Vibrio cholerae, Plasmodium, Leishmania, Entamoeba. Mode of action of drug and mechanism of drug resistance in pathogens. Molecular mechanisms for origin of new pathogens.",
+        'hours': 9
+      },
+      {
+        'topic': "Therapeutics",
+        'content':
+            "rDNA derived drugs. Chemotherapy,immunotherapy and Gene therapy: somatic and germ line gene therapy. Monitoring and response to therapy, geneticcounselling.",
+        'hours': 7
+      },
+      {
+        'topic': "Forensic medicine",
+        'content':
+            "Repetitive DNA and its application in forensic medicine. Tissue analysis and human relationship.",
+        'hours': 6
+      },
+      {
+        'topic': "Drug design and delivery technology",
+        'content':
+            "Combinatorial chemistry, Organized Drug discovery and development. Receptor versus enzyme mediated drug action. Rational design of enzyme inhibitors. ACE, Renin and HIV protease inhibitors.",
+        'hours': 8
+      },
+      {
+        'topic': "Nanobiotechnology in medical aspects",
+        'content':
+            "Types of drug delivery through nanobiotechnology, types and synthesis of nanomaterials, protein-based nanomaterials, DNA-based nanomaterials, risk potential of nanomaterial.",
+        'hours': 2
+      },
+      {
+        'topic': "Stem cells and tissue engineering",
+        'content':
+            "Types of human stem cells, Properties of stem cells and their applications, Induced pluripotent stem cells and their applications (case study of relevance), Introduction to tissue engineering, basic components and Tissue engineering of specific tissues and organs.",
+        'hours': 5
+      },
+    ],
     "questions": 100,
     "question_list": [
       {
@@ -313,7 +363,74 @@ const courses = [
     "course_name": "Agriculture Biotechnology",
     "course_id": 2,
     "course_code": "bt-614",
-    "syllabus": "syllabus for agri...",
+    "course_syllabus": [
+      {
+        'topic': "Organic farming",
+        'content':
+            "Soil management and organic fertilizers. Composting and vermicomposting.",
+        'hours': 2
+      },
+      {
+        'topic': "Plant-beneficial microbe interaction at molecular level",
+        'content':
+            "Nitrogen metabolism, Biochemistry, Genetics, and Physiology of biological nitrogen fixation; Process of nodule formation in Rhizobium-legume Symbiosis, Regulation and functions of rhizobial nodulation genes, Nitrogen-fixation in root nodule. Mycorrhizal association, Use of mycorrhizae for enhancing crop productivity, Phosphate solubilizing microorganisms. PGPR acting via plant hormones (auxins) and enhancement of water and mineral uptake (Azospirillum, Herbaspirillum, and mycrorrhiza). Nitrogen fixing microorganisms and blue green algae as bio-fertilizer, Azolla as bio-fertilizer in rice field",
+        'hours': 10
+      },
+      {
+        'topic': "Algal biotechnology",
+        'content':
+            "Mass cultivation of micro-algal species of commercial value: Spirulina, Dunaliella, Chlorella and others, Micro-algae for human and animal consumption; and waste-water treatment",
+        'hours': 2
+      },
+      {
+        'topic': "Biotic stress in Plant health",
+        'content':
+            "Plant disease: disease epidemic, Plant-pathogen interaction, the plant defense system. Phytoalexins and Immune system in plant, Innate immunity: PAMP*-triggered immunity (PTI) and effector-triggered immunity (ETI). The gene-for-gene model and the hypersensitive response (HR). Systemic acquired resistance (SAR). Disease diagnosis: Traditional methods, Immunological methods: Diffusion, Agglutination, Enzyme linked immuno sorbent assay (ELISA), Immunofluorescence techniques. Molecular techniques: Polymerase chain reaction (PCR), real time-PCR, Randomly amplified polymorphic DNA (RAPD), Restriction fragment length polymorphism, 16s rDNA. Crop protection: Chemical control by Pesticides and its Pros and cons, Biological control: Management of plant diseases caused by fungi, Bacteria, virus, nematodes and insects; Microbial herbicides; Bacterial biopesticides; Production of biopesticides; Fungal biopesticides; Entomo-pathogenic fungi, benefits of biological control, Integrated pest management,Maintainingvirus free plants. Genetic control: Making plant resistance by breeding and Genetic engineering. Pathogen associated molecular pattern",
+        'hours': 8
+      },
+      {
+        'topic': "Abiotic stress in Plant health",
+        'content':
+            "Environmental factors as stress: Abiotic and biotic stresses, perception to stress and creation of signal, Plant reactions to stress, Structural and physiological adaptation and molecular control to different stresses: Light, Temperature, water (drought and flooding), salt and heavy metal, Engineering stress tolerant plant.",
+        'hours': 5
+      },
+      {
+        'topic': "Post-harvest stress in Plant health",
+        'content':
+            "Aspects of plant health related to post-harvest. Biotic and abiotic stresses at storage.",
+        'hours': 1
+      },
+      {
+        'topic': "Plant as source of energy (Biofuels)",
+        'content':
+            "Plant biomass as source of renewable fuel, Cellulose, hemicellulose lignin degrading and bioethanol producing microorganisms. Technology, prospect, pros and cons to use biomass for production of bioalcohol, biodisel and biogas.",
+        'hours': 2
+      },
+      {
+        'topic': "Plant breeding in crop improvement",
+        'content':
+            "Methods and use of classical plant breeding. Molecular marker technology, Marker assisted selection in plant breeding. QTL (Quantitative Trait Loci), Genetic analysis and characterization of crops with various DNA markers and isozymes. Application of Biotechnology in plant breeding programs, Testing GM crops",
+        'hours': 4
+      },
+      {
+        'topic': "Genetic modification in crop improvement",
+        'content':
+            "Genetic engineering for making crop plants resistance to bacteria, fungi, virus and insects (Rice, Tobacco, Bt cotton etc.); herbicide resistance (glyphosate resistance soybean), Modification of phyto-nutrients in crops (Golden rice etc.), tolerance to stresses; Gene subtraction: Antisense technology, Modification of ripening of fruits and vegetables (Tomato). Termination technology, Molecular farming: Use plant as chemical and pharmaceutical factories for the production of novel products. Problem with GMO: public concern and safety concern",
+        'hours': 5
+      },
+      {
+        'topic': "Mushroom biotechnology",
+        'content':
+            "Poisonous andnon poisonous mushroom, Introduction to wild and cultivated mushrooms of Nepal and their economic importance, Reproduction: Mating system in fungi, Homothallism, Secondary homothallism, Heterothallism (bipolar and tetrapolar). Life cycle of mushroom, Mushroom cultivation: Effect of genetic factors, temperature, light, humidity, medium on cultivation of mushrooms. Techniques of Commercial cultivation of some important mushrooms, Single spore isolation/pure culture and spawn production techniques, Present situation and prospect of mushroom cultivation in Nepal. Medicinal values of mushroom: Medicinal mushrooms, Medicinal importance chemicals like Polysaccharides, Gluco-peptides. Steriods. Bioactive compounds such as nucleosides, cordycepinetc found in mushroom",
+        'hours': 7
+      },
+      {
+        'topic': "Agro genetic resources conservation",
+        'content':
+            "Phytosanitory aspects of plant germplasm conservation. Cryopreservation. Cataloging, characterization, evaluation and utilization of genetic resources. National seed policy, Seed: seed health, diseases, quality, viability and storage",
+        'hours': 2
+      },
+    ],
     "questions": 85,
     "question_list": [
       {
@@ -569,7 +686,69 @@ const courses = [
     "course_name": "Animal Biotechnology",
     "course_id": 3,
     "course_code": "bt-344",
-    "syllabus": "syllabus for animal ...",
+    "course_syllabus": [
+      {
+        'topic': "Animal Reproductive Techniques and Manipulation",
+        'content':
+            "Review on comparative anatomy and hormonal regulation of reproductive system. Spermatogenesis, Oogenisesis, Collection, preservation and extension of liquid semen. Frozen semen: processing, preservation and extension • Estrus /Menstruation synchronization, superovulation (MOET). Artificial Insemination (AI), Collection and Preservation eggs. In vitro Fertilization (IVF) Process, Fertilization, Implantation, Placentation, Pregnancy diagnosis (external and biological method), Intra cytoplasmic sperm Injection (ICSI) Embryo bisection, nuclear transplantation. Advances in embryo manipulation",
+        'hours': 10
+      },
+      {
+        'topic': "Animal cell /Tissue Culture",
+        'content':
+            "Terminologies of primary and established cell lines, Culture and maintenance of Cell lines, Characterization of cultured cells. Measurement of Viability. Cytotoxicity. Animal tissue culture, Stem Cell culture. Embryonic and Adult Stem cell culture and their applications. Short term lymphocyte culture. Fibroblast culture from chick embryo.",
+        'hours': 6
+      },
+      {
+        'topic': "Transgenic Animals",
+        'content':
+            "Trangenesis and application of transgenic techniques, techniques of gene manipulation and Gene Transfer, Advances in the transgenic animal production in cattle, buffalo, sheep, goat, swine poultry, mouse, rabbit and fish, Fish polyploidy, fish chromosome and gene manipulation, Gene knock out technology for animal models, Recombinant Genes for the production of entities of pharmacological and commercial values",
+        'hours': 8
+      },
+      {
+        'topic': "Cell-cell communication in development",
+        'content':
+            "Review of cell signaling, paracrine and endocrine factors cell death pathways, juxtacrine signaling differentiated state, the extracellular matrix, integrins, epithelial-mesenchymal transition",
+        'hours': 1
+      },
+      {
+        'topic': "Early development in birds and mammals",
+        'content':
+            "Development in birds: cleavage, gastrulation axis specification. Mammalian development: Cleavage, gastrulation, axis formation, the dorsal-ventral and left-right axes",
+        'hours': 3
+      },
+      {
+        'topic': "Sex determination in mammal",
+        'content': "Primary sex determination, secondary sex determination",
+        'hours': 1
+      },
+      {
+        'topic': "Medical aspects of developmental biology",
+        'content':
+            "Disease of development: genetic errors and human syndromes, genetic and phenotypic heterogeneity, prenatal diagnosis and preimplantationgenetics, teratogenesis, cancer as a disease of development. Developmental therapies:anti-angiogenesis, stem cells and tissue regeneration",
+        'hours': 3
+      },
+      {
+        'topic':
+            "Molecular techniques in animal conservation and improvement of species",
+        'content':
+            "Marker assisted technology, identification, Selection of farm animals and rear animal species for production and conservation, Phylogenic study through molecular technique, Use of Gene and Protein polymorphism such as RFLP, SNP, PCR, RAPD, Quantitative Trait Link (QTL) analysis for animal improvement",
+        'hours': 7
+      },
+      {
+        'topic':
+            "Animal disease diagnosis, Vaccine and Antibody production and Gene therapy",
+        'content':
+            "Immunological and molecular methods of disease diagnosis (ELISA, DNA probes, PCR, Western, Northern and Southern blotting). Development of live recombinant vaccine, sub unit vaccine and DNA vaccines, Animal Model for vaccination, Monoclonal and polyclonal antibody production in animal model and purification, Application of gene therapy",
+        'hours': 5
+      },
+      {
+        'topic': "Animal microflora",
+        'content':
+            "Probiotics, Prebiotics manipulation of rumen/gut microflora",
+        'hours': 2
+      },
+    ],
     "questions": 78,
     "question_list": [
       {
@@ -590,7 +769,67 @@ const courses = [
     "course_name": "Food Biotechnology",
     "course_id": 4,
     "course_code": "bt-611",
-    "syllabus": "syllabus for food...",
+    "course_syllabus": [
+      {
+        'topic': "History and scope",
+        'content':
+            "History and cope of food biotechnology, Intrinsic and extrinsic factors that affect microbial growth",
+        'hours': 2
+      },
+      {
+        'topic': "Starter cultures",
+        'content':
+            "Introduction, Mixed and defined cultures, and microorganisms, Manufacture of cultures",
+        'hours': 3
+      },
+      {
+        'topic': "Production of microbial food ingredients/ products",
+        'content':
+            "Organic acids: citric acid, lactic acid, gluconic acid, Amino acids: L-glutamic acid, L-lysine, L-tryptophan, Vitamins: -carotene, vitamin B12, riboflavin, Misc.: SCP",
+        'hours': 10
+      },
+      {
+        'topic': "Technology of alcoholic beverages",
+        'content':
+            "Production of alcoholic non-distilled beverages: Wine (introduction, types, production), Beer (introduction, raw materials, malting, production), Jand, sake, b) Production of alcoholic distilled beverages, Raksi, whiskey, branby, rum, vodka, gin",
+        'hours': 7
+      },
+      {
+        'topic': "Food processing and quality",
+        'content':
+            "processing and quality, Postharvest operations: raw materials, cleaning, sorting and grading, peeling, blanching, Concept of HACCP",
+        'hours': 2
+      },
+      {
+        'topic': "Food preservation",
+        'content':
+            "Principles: physical and chemical and biological methods of food preservation, Concept of hurdle technology for food preservation",
+        'hours': 5
+      },
+      {
+        'topic': "Indigenous non-alcoholic fermented food products",
+        'content':
+            "Gundruk, sinki, kinema, mesu, pickle, yoghurt (dahi), jujudhau, Sauerkraut, natto, soyu, miso, tempeh, kimchi, idli, kafir, vinegar",
+        'hours': 6
+      },
+      {
+        'topic': "Tea processing technology",
+        'content': "Introduction, manufacture, chemistry, grading",
+        'hours': 3
+      },
+      {
+        'topic': "Functional foods",
+        'content':
+            "Pro-biotics — definition, functional properties, interaction with pre-biotics, health benefits, food products (yoghurt, curd, etc.) b) Pre-biotics — introduction, functions, sources, health benefits c) Phytochemicals — introduction, active components, health benefits, sources",
+        'hours': 6
+      },
+      {
+        'topic': "Fermented meat products",
+        'content':
+            "Introduction, Starter cultures and their role, Production of sausage, cured meat, etc., Quality and health benefits",
+        'hours': 3
+      },
+    ],
     "questions": 92,
     "question_list": [
       {
@@ -847,7 +1086,56 @@ const courses = [
     "course_name": "Biostatistics and Research methodology",
     "course_id": 5,
     "course_code": "bt-616",
-    "syllabus": "syllabus for biostat...",
+    "course_syllabus": [
+      {
+        'topic': "Concept and Application of Probability",
+        'content':
+            "Review of concept of probability, additive and multiplicative probability. Binomial probability and Poisson distribution, Normal and Z distribution and applications, Conditional probability and Bayes rule. Mathematical expectations",
+        'hours': 5
+      },
+      {
+        'topic': "General introduction to sampling theory",
+        'content':
+            "Principle of Random Sampling, Non Probability Sampling: Purposive, Quota, Convenience and Self-selected sampling. Probability sampling: Systematic, Stratified and Cluster sampling, Determination of sample sizes",
+        'hours': 2
+      },
+      {
+        'topic': "Statistical Test",
+        'content':
+            "Test of significance, Test on means, Estimation and test of hypothesis, Type I and Type II error, Confidence Interval. Z, t and F tests, and non parametric test: Chi Square Test",
+        'hours': 4
+      },
+      {
+        'topic': "Regression, Correlation and Fitting of Data",
+        'content':
+            "Simple linear correlation and regression for two or more variables, Least Square methods. Fitting of linear, probabilistic, exponential to time series data and making projections",
+        'hours': 3
+      },
+      {
+        'topic': "Multivariate Analysis",
+        'content':
+            "Multivariate Analysis, Principle Component Analysis (PCA), Cluster Analysis",
+        'hours': 3
+      },
+      {
+        'topic': "Researches and Experimental Designs",
+        'content':
+            "Varieties of researches. Essentials of experimental design. Application of experimental design: CRD, RCBD, Latin Square, Two Factorial, Three Factorial, Split Plot Design, Nested Design. Mean Comparison: LSD and DMRT",
+        'hours': 8
+      },
+      {
+        'topic': "Computational Statistics",
+        'content':
+            "R - Plus, SPSS, Gen Stat, Bayesian methods including Markov Chain Monte Carlo",
+        'hours': 4
+      },
+      {
+        'topic': "Scientific Researches communication/ Writing",
+        'content':
+            "Thesis, Research, Project and Article writing including Proposal writing",
+        'hours': 3
+      },
+    ],
     "questions": 50,
     "question_list": [
       {
@@ -902,7 +1190,26 @@ const courses = [
     "course_name": "IPR, Biosafety and Bioethics",
     "course_id": 6,
     "course_code": "bt-617",
-    "syllabus": "syllabus for ipr...",
+    "course_syllabus": [
+      {
+        'topic': "IPR",
+        'content':
+            "Introduction, Categories (Patents, Copyrights, Trademarks, Geographical indications, Industrial designs, Layout design of integrated circuits, Trade secrets, Breeder's rights, Utility models), WTO: As an international agency controlling trade among nations. WTO with references to biotechnological affairs, TRIPs. General Introduction: WIPO, Patent claims, the legal decision-making process, ownership of tangible and intellectual property. Basic Requirements of Patentability: Special issues in Biotechnology Patents: Disclosure requirements, Collaborative research, Competitive research, Plant biotechnology: Foreign patents, Plant variety protection act, and the strategy of protecting plants. Patent Litigation: Substatritive aspects of patent litigation, Procedural aspects of patent litigation, different Doctrines. Case studies of patent.",
+        'hours': 8
+      },
+      {
+        'topic': "Biosafety",
+        'content':
+            "Handling of Biological and radiolabelleled materials. Biosafety regulations in the handling of recombinant DNA processes and products in institutions and industries, biosafety assessment procedures abroad. Biotechnology and food safety: The GM-food debate and biosafety assessment, Ecological safety assessment of recombinant organisms and transgenic crops, case studies of relevance (e.g. Bt cotton), Biosafety assessment of biotech pharmaceutical products such as drugs/vaccines etc. International dimensions in biosafety: Cartagena protocol on biosafety, bioterrorism and convention on biological weapons",
+        'hours': 4
+      },
+      {
+        'topic': "Bioethics",
+        'content':
+            "Bioethics: Legality, morality and ethics, the principles of bioethics: autonomy, human rights, beneficence, privacy, justice, equity etc. Biotechnology and Bioethics: The expanding scope of ethics in biotechnology, ethical conflicts in biotechnology - interference with nature, fear of unknown, unequal distribution of risks and benefits of biotechnology, bioethics vs. business ethics, ethical dimensions of IPR, technology transfer and access to techonological",
+        'hours': 3
+      },
+    ],
     "questions": 50,
     "question_list": [
       {
@@ -1002,7 +1309,60 @@ const courses = [
     "course_name": "Entrepreneurship Development",
     "course_id": 7,
     "course_code": "bt-618",
-    "syllabus": "syllabus for entre.....",
+    "course_syllabus": [
+      {
+        'topic': "Introduction",
+        'content':
+            "Overview of the basics of Entrepreneurship: Concept and elements of entrepreneurship, entrepreneur and entrepreneurship, entrepreneurial role in the economy, emerging challenge and trends in entrepreneurship (internet and e-commerce)",
+        'hours': 4
+      },
+      {
+        'topic': "Entrepreneurship Growth",
+        'content':
+            "Factors affecting entrepreneurship growth, entrepreneurial thought, process and approaches.",
+        'hours': 2
+      },
+      {
+        'topic': "Creativity and Innovation",
+        'content':
+            "Concept and development of creativity, concept, types, development and sources of innovation.",
+        'hours': 2
+      },
+      {
+        'topic': "Entrepreneurial Risk Stress and Management",
+        'content':
+            "Entrepreneurial risk and types, entrepreneurial stress, types and sources, management of stress.",
+        'hours': 3
+      },
+      {
+        'topic': "Business oppurtunity identification",
+        'content': "Concept, sources and methods of generating new ideas.",
+        'hours': 2
+      },
+      {
+        'topic': "Feasibility studies",
+        'content':
+            "Concept and components, business description, marketing and financial component, development and production, organization and management and forms of ownership. Selection of best option.",
+        'hours': 5
+      },
+      {
+        'topic': "Business plan",
+        'content': "Concept, benefits and preparation (practical exercise).",
+        'hours': 4
+      },
+      {
+        'topic': "Starting New Venture",
+        'content':
+            "Introduction of legal provisions of related laws and regulations.",
+        'hours': 5
+      },
+      {
+        'topic': "Institutional Support to Entrepreneurship",
+        'content':
+            "Need, institutions (government, non-government and others) involved for entrepreneurial development, support modus, present status of institutional support and its strengths and weaknesses.",
+        'hours': 5
+      },
+    ],
     "questions": 50,
     "question_list": [
       {

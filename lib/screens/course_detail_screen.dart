@@ -66,12 +66,21 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                     courseName: widget.course_name,
                     courseCode: widget.course_code,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Past Questions",
-                      style: TextStyle(
-                          fontSize: 22.0, fontWeight: FontWeight.bold),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.help_outline),
+                        SizedBox(
+                          width: 8.0,
+                        ),
+                        Text(
+                          "Past Questions",
+                          style: TextStyle(
+                              fontSize: 18.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                   ),
 
@@ -102,7 +111,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                           : null,
                                   backgroundColor:
                                       selectedFilter == element.toLowerCase()
-                                          ? PRIMARY_BUTTON_BACKGROUND
+                                          ? primaryButtonBackground
                                           : null,
                                 ),
                                 child: Text(element == 'Very-Short'

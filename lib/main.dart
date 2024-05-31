@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:past_qns/screens/syllabus_screen.dart';
 import 'screens/course_detail_screen.dart';
 import './data/courses.dart';
+import 'screens/syllabus_screen.dart';
 
 class CourseCard extends StatelessWidget {
   final int course_id;
@@ -71,8 +71,7 @@ class CourseCard extends StatelessWidget {
                     ],
                   ),
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const Icon(Icons.my_library_books_outlined),
                       Padding(
@@ -83,8 +82,8 @@ class CourseCard extends StatelessWidget {
                                 (course) =>
                                     course['course_id'] ==
                                     course_id); // Find the selected course
-                            final courseSyllabus = selectedCourse['syllabus']
-                                .toString(); // Access syllabus data
+
+                             // Access syllabus data
 
                             final courseName =
                                 selectedCourse["course_name"].toString();
@@ -95,17 +94,18 @@ class CourseCard extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => SyllabusPage(
-                                  courseSyllabus: courseSyllabus,
+                                builder: (context) => SyllabusScreen(
+                                  courseSyllabus:  selectedCourse[
+                                'course_syllabus'] as List<dynamic>,
                                   courseName: courseName,
                                   courseCode: courseCode,
                                 ),
                               ),
                             );
                           },
-                          child: Text("Syllabus",
+                          child: const Text("Syllabus",
                               style: TextStyle(
-                                  fontSize: 14.0, color: Colors.grey[600])),
+                                  fontSize: 14.0)),
                         ),
                       )
                     ],
