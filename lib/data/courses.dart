@@ -809,7 +809,7 @@ const courses = [
       {
         'topic': "Indigenous non-alcoholic fermented food products",
         'content':
-            "Gundruk, sinki, kinema, mesu, pickle, yoghurt (dahi), jujudhau, Sauerkraut, natto, soyu, miso, tempeh, kimchi, idli, kafir, vinegar",
+            "Gundruk, sinki, kinema, mesu, pickle, yoghurt (dahi), jujudhau, Sauerkraut, natto, soyu, miso, tempeh, kimchi, idli, kefir, vinegar",
         'hours': 6
       },
       {
@@ -1182,6 +1182,233 @@ const courses = [
         "appeared_in": ["Internal, 2080"]
       },
       {
+        "id": 1,
+        "type": "long",
+        "question_parts": {
+          "text_before_table":
+              "A medical researcher is studying the relationship between the dosage of a particular drug and the improvement in patients' pain levels. The researcher records the dosage (in milligrams) and corresponding pain level improvement (on a scale of 1 to 10) for 10 patients. The data collected are as follows:",
+          "question_table": [
+            {
+              "column1": "Patient ID",
+              "column2": "1",
+              "column3": "2",
+              "column4": "3",
+              "column5": "4",
+              "column6": "5",
+              "column7": "6",
+              "column8": "7",
+              "column9": "8",
+              "column10": "9",
+              "column11": "10",
+            },
+            {
+              "column1": "Dosages (in mL)",
+              "column2": "50",
+              "column3": "75",
+              "column4": "100",
+              "column5": "85",
+              "column6": "120",
+              "column7": "90",
+              "column8": "65",
+              "column9": "110",
+              "column10": "95",
+              "column11": "80",
+            },
+            {
+              "column1": "Pain improvement",
+              "column2": "3",
+              "column3": "4",
+              "column4": "5",
+              "column5": "4",
+              "column6": "6",
+              "column7": "4",
+              "column8": "3",
+              "column9": "5",
+              "column10": "4",
+              "column11": "3",
+            },
+          ],
+          "text_after_table":
+              "i. Calculate the correlation coefficient between the dosages of particular drugs in milligram and pain improvement level. Interpret it in context of the study. ii. Determine the regression equation to predict the pain improvement based on the dosage of drug. iii. Use the regression equation to predict the pain improvement when the expression dosage is 150 mL."
+        },
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "long",
+        "question_parts": {
+          "text_before_table":
+              "Serum digoxin levels were determined for nine healthy males aged 20-45 years following rapid intravenous injection of the drug. The measurements were made 4 hours after the injection and again at the end of 8 hours period.",
+          "question_table": [
+            {
+              "column1": "Patient ID",
+              "column2": "1",
+              "column3": "2",
+              "column4": "3",
+              "column5": "4",
+              "column6": "5",
+              "column7": "6",
+              "column8": "7",
+              "column9": "8",
+              "column10": "9",
+            },
+            {
+              "column1": "Serum digoxin level after injection (4 hours)",
+              "column2": "1",
+              "column3": "1.3",
+              "column4": "0.9",
+              "column5": "1",
+              "column6": "1",
+              "column7": "0.9",
+              "column8": "1.3",
+              "column9": "1.1",
+              "column10": "1",
+            },
+            {
+              "column1": "Serum digoxin level after injection (8 hours)",
+              "column2": "1",
+              "column3": "1.3",
+              "column4": "0.7",
+              "column5": "1",
+              "column6": "0.9",
+              "column7": "0.8",
+              "column8": "1.2",
+              "column9": "1",
+              "column10": "1",
+            },
+          ],
+          "text_after_table":
+              "Is the difference in the serum digoxin concentration at the end of 4 hours and the end of 8 hours statistically significant at a 10% level?"
+        },
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "long",
+        "question_parts": {
+          "text_before_table":
+              "Two drugs- sleeping tablets A and B are given to two groups of patients and the results obtained are tabulated as follows:",
+          "question_table": [
+            {
+              "column1": "Effect on patients",
+              "column2": "Drug A",
+              "column3": "Drug B",
+              "column4": "Total",
+            },
+            {
+              "column1": "Slept well",
+              "column2": "4",
+              "column3": "25",
+              "column4": "29",
+            },
+            {
+              "column1": "Did not sleep",
+              "column2": "14",
+              "column3": "7",
+              "column4": "21",
+            },
+            {
+              "column1": "Total",
+              "column2": "18",
+              "column3": "32",
+              "column4": "40",
+            },
+          ],
+          "text_after_table":
+              "Test the hypothesis that the effect on patients' sleep is independent of drug-sleeping tablets."
+        },
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "long",
+        "question":
+            "An agriculture informatics research team is studying the cell count data of a particular cell population in a tissue culture. They are interested in modeling the distribution of cell counts to better understand the underlying biological process. They collect cell count data over a period of 10 days and obtain the following counts: 2, 5, 3, 4, 1, 2, 6, 3, 2, 5. Fit the Poisson distribution and obtain expected count of day 7th day.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "long",
+        "question_parts": {
+          "text_before_table":
+              "A medical researcher is studying the relationship between diabetes and blood pressure in a sample of 500 patients. The researcher has collected data on whether each patient has diabetes (Yes/ No) and whether they have high blood pressure (Yes/ No). The data is summarized in a cross-tabulation table as follows:",
+          "question_table": [
+            {
+              "column1": "Conditions",
+              "column2": "Diabetes",
+              "column3": "No diabetes"
+            },
+            {"column1": "High BP", "column2": "120", "column3": "100"},
+            {"column1": "No high BP", "column2": "50", "column3": "230"},
+          ],
+          "text_after_table":
+              "i. Calculate the conditional probability of having diabetes given that a patient has high blood pressure and interpret it. ii. Calculate the conditional probability of having no diabetes given that a patient has high blood pressure and interpret it."
+        },
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question": "Explain the difference between type I and type II error.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "Between 20 subjects with schizophrenia, the mean number of treatment days was 4.7 with a standard deviation of 9.3. Construct 90% and 99% confidence interval for the mean number of treatment days.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "The researchers are interested in the mean age of a certain population. A random sample of 10 individuals drawn from the population of interest has a mean of 25 years. Assuming that the population is approximately normally distributed with variance 18, can you conclude that the mean is different from 28 years?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "Suppose, the time of onset of disease is approximately normally distributed with a mean of 11.5 years and standard devation of 3 years. Find the probability that the child is (i) between the ages of 8.5 years and 14.5 years (ii) over 10 years of age (iii) under 12 years (iv) above 14 years of age. There are 400 children at the time of onset of disease, how many of the children are under 12 years of age?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "In a Health Information System (HIS) survey regarding maternal and child health care, the proportion of eligible couples using family planning devices was 0.34. It is desired to obtain an estimated proportion (p) that is not more than 0.05 away from true proportion and to be with 95% Confidence Interval (CI). What should be the sample size?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "Differentiate between probability and non-probability sampling.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "In a study, an investigation team is interested in estimating the mean DNA methylation levels in a population of cancer patients. They obtain a list of 100 cancer patients and collect DNA methylation data from a random sample of 30 patients and found the mean DNA methylation is 0.75 with a sample s.d 0.10. They want to construct a 95% confidence interval for the true population mean DNA methylation levels. As a biostatistician, help the researchers' team construct a 95% confidence interval with interpretation.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "The total cholesterol values of certain population were normally distributed with a mean of 200 mg/dL and a s.d. of 20 mg/dL. Find the probability that an individual picked at random from this population will have a cholesterol level i) between 170 and 210 mg/dL and ii) more than 240 mg/dL.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 2,
+        "type": "short",
+        "question":
+            "In a biotechnology microbiome study, a research team is investigating the prevalence of a specific bacterial species in the gut microbiota of patients with a particular disease. They want to estimat the proportion of patients who have bacterial species present in their gut with a 99% confidence level and a margin of error of no more than 1%. They plan to collect stool samples from patients and use a molecular method to detect the presence or absence of bacterial species.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
         "id": 2,
         "type": "very-short",
         "question":
@@ -1218,6 +1445,24 @@ const courses = [
         "id": 1,
         "type": "very-short",
         "question": "How can you define a research question?",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Write down the conditions of using binomial distribution.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Define Poisson distribution.",
+        "appeared_in": ["Internal, 2080"]
+      },
+      {
+        "id": 1,
+        "type": "very-short",
+        "question": "Write down the properties of a good estimator.",
         "appeared_in": ["Internal, 2080"]
       }
     ]
