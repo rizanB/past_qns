@@ -1141,8 +1141,44 @@ const courses = [
       {
         "id": 1,
         "type": "long",
-        "question":
-            "A biotechnology research team is studying the effect of different growth media (A, B and C) on the production of a specific enzyme in a genetically engineered micro-organism. They decide to use a randomized complete block design (RCBD) with five blocks. Each block represents a different batch of micro-organisms. The micro-organisms are randomly assigned to the growth media and the enzyme production levels (in units per mL) are measured after a fixed incubation period. The data collected from the experiment are as follows: Block 1: A (35 U/mL), B (38 U/mL), C (32 U/mL), Block 2: A (41 U/mL), B (39 U/mL), C (40 U/mL), Block 3: A (37 U/mL), B (36 U/mL), C (34 U/mL), Block 4: A (40 U/mL), B (43 U/mL), C (38 U/mL), Block 5: A (33 U/mL), B (36 U/mL), C (34 U/mL). What is the treatment factor and blocking factor in this experiment? Perform a statistical analysis to determine if there are significant differences in enzyme production levels among the growth media. What conclusions can you draw from the results of the statistical analysis?",
+        "question_parts": {
+          "text_before_table":
+              "A biotechnology research team is studying the effect of different growth media (A, B and C) on the production of a specific enzyme in a genetically engineered micro-organism. They decide to use a randomized complete block design (RCBD) with five blocks. Each block represents a different batch of micro-organisms. The micro-organisms are randomly assigned to the growth media and the enzyme production levels (in units per mL) are measured after a fixed incubation period. The data collected from the experiment are as follows:",
+          "question_table": [
+            {
+              "column1": "Block 1",
+              "column2": "A (35 U/mL)",
+              "column3": "B (38 U/mL)",
+              "column4": "C (40 U/mL)"
+            },
+            {
+              "column1": "Block 2",
+              "column2": "A (41 U/mL)",
+              "column3": "B (39 U/mL)",
+              "column4": "C (40 U/mL)"
+            },
+            {
+              "column1": "Block 3",
+              "column2": "A (37 U/mL)",
+              "column3": "B (36 U/mL)",
+              "column4": "C (34 U/mL)"
+            },
+            {
+              "column1": "Block 4",
+              "column2": "A (40 U/mL)",
+              "column3": "B (43 U/mL)",
+              "column4": "C (38 U/mL)"
+            },
+            {
+              "column1": "Block 5",
+              "column2": "A (33 U/mL)",
+              "column3": "B (36 U/mL)",
+              "column4": "C (34 U/mL)"
+            },
+          ],
+          "text_after_table":
+              "What is the treatment factor and blocking factor in this experiment? Perform a statistical analysis to determine if there are significant differences in enzyme production levels among the growth media. What conclusions can you draw from the results of the statistical analysis?"
+        },
         "appeared_in": ["Internal, 2080"]
       },
       {

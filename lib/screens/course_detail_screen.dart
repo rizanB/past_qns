@@ -13,7 +13,8 @@ class CourseDetailPage extends StatefulWidget {
   final int questions;
 
   const CourseDetailPage(
-      {super.key, required this.course_id,
+      {super.key,
+      required this.course_id,
       required this.course_code,
       required this.course_name,
       required this.questions});
@@ -54,8 +55,8 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Text("Past Questions"),
-      ),
+          // title: Text("Past Questions"),
+          ),
       body: questionList.isNotEmpty
           ? Padding(
               padding:
@@ -118,7 +119,6 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                                     ? 'Very Short'
                                     : element),
                               ),
-
                             );
                           }),
                         ],
@@ -132,13 +132,37 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final question = questionList[index];
-                      final questionText = question["question"];
-                      final appearedIn = question["appeared_in"];
 
-                      return QuestionCard(
-                        questionText: questionText,
-                        appearedIn: appearedIn,
-                      );
+                      if (question.containsKey('question_parts')) {
+                        final text1 =
+                            question['question_parts']['text_before_table'];
+                        final tableData =
+                            question['question_parts']['question_table'];
+                        final text2 =
+                            question['question_parts']['text_after_table'];
+
+                        return QuestionCard(
+                          questionText1: text1,
+                          tableData: tableData, // Pass table data if available
+                          questionText2: text2,
+                          appearedIn: question['appeared_in'],
+                        );
+                      } else {
+                        final questionText = question["question"];
+                        final appearedIn = question["appeared_in"];
+
+                        return QuestionCard(
+                          questionText1:
+                              questionText, // Use questionText for single-part Qs
+                          tableData: question.containsKey('question_parts')
+                              ? question['question_parts']['question_table']
+                              : const [], // Check for parts, else empty list
+                          // Set tableData to null for single-part Qs
+                          questionText2:
+                              '', // Set questionText2 to empty string for single-part Qs
+                          appearedIn: appearedIn,
+                        );
+                      }
                     },
                   ),
                 ],
