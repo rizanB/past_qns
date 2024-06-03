@@ -773,7 +773,7 @@ const courses = [
       {
         'topic': "History and scope",
         'content':
-            "History and cope of food biotechnology, Intrinsic and extrinsic factors that affect microbial growth",
+            "History and scope of food biotechnology, Intrinsic and extrinsic factors that affect microbial growth",
         'hours': 2
       },
       {
@@ -785,7 +785,7 @@ const courses = [
       {
         'topic': "Production of microbial food ingredients/ products",
         'content':
-            "Organic acids: citric acid, lactic acid, gluconic acid, Amino acids: L-glutamic acid, L-lysine, L-tryptophan, Vitamins: -carotene, vitamin B12, riboflavin, Misc.: SCP",
+            "Organic acids: citric acid, lactic acid, gluconic acid, Amino acids: L-glutamic acid, L-lysine, L-tryptophan, Vitamins: beta-carotene, vitamin B12, riboflavin, Misc.: SCP",
         'hours': 10
       },
       {
