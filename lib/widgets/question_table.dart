@@ -10,33 +10,39 @@ class QuestionTable extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8.0),
-        child: Table(
-          border: TableBorder.all(
-            color: Colors.blueGrey, // Light grey for lines
-            width: 1.0, // Thin lines
-            style: BorderStyle.solid, // Solid lines
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: DataTable(
+            border: TableBorder.all(
+              color: Colors.blueGrey, // Light grey for lines
+              width: 1.0, // Thin lines
+              style: BorderStyle.solid, // Solid lines
+            ),
+            columns: _buildColumns(),
+            rows: _buildRows(),
           ),
-          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-          children: [
-            // Data Rows
-            ...data.map((row) => TableRow(
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide.none, // Bottom line
-                    ),
-                  ),
-                  children: row.entries
-                      .map((entry) => TableCell(
-                              child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 4.0),
-                            child: Text(entry.value),
-                          )))
-                      .toList(),
-                )),
-          ],
         ),
       ),
     );
+  }
+
+  List<DataColumn> _buildColumns() {
+    return data.first.keys.map((key) {
+      return DataColumn(
+        label: Text(data.first[key]!),
+      );
+    }).toList();
+  }
+
+  List<DataRow> _buildRows() {
+    return data.skip(1).map((row) {
+      return DataRow(
+        cells: row.keys.map((key) {
+          return DataCell(
+            Text(row[key]!),
+          );
+        }).toList(),
+      );
+    }).toList();
   }
 }
