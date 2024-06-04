@@ -1,16 +1,22 @@
 # past_qns
 
-A new Flutter project.
+app to view syllabus and past questions for msc biotechnology, at present - with plans to integrate other courses in the future.
 
-## Getting Started
+## Contributing
 
-This project is a starting point for a Flutter application.
+If you've been assigned to the project, please check the issues. If there's an open issue or you have a new feature idea, feel free to add a pull request.
 
-A few resources to get you started if this is your first Flutter project:
+Steps for contributing:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Check for issues
+If you've found an open issue you're interested in fixing, please comment on it so others won't start working on it as well. This is to reduce conflicts.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Create a new branch
+Once you've found an issue, fork the main branch - create your own branch.
+Name it so that it's descriptive of the issue you're trying to fix.
+
+eg. add-padding-to-profile-card
+
+3. Test everything locally
+
+4. Link the branch to the issue and create a pull request. Please add screenshots if the changes you made are visual.
