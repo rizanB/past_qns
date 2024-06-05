@@ -133,7 +133,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Past Questions",
+          title: const Text("appname_syllabus_past_qns",
               style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
         ),
         body: Padding(
