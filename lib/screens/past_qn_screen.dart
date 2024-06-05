@@ -5,13 +5,13 @@ import 'package:past_qns/widgets/course_heading_section.dart';
 import 'package:past_qns/widgets/question_card.dart';
 import '../data/courses.dart';
 
-class CourseDetailPage extends StatefulWidget {
+class PastQuestionScreen extends StatefulWidget {
   final int course_id;
   final String course_code;
   final String course_name;
   final int questions;
 
-  const CourseDetailPage(
+  const PastQuestionScreen(
       {super.key,
       required this.course_id,
       required this.course_code,
@@ -19,10 +19,10 @@ class CourseDetailPage extends StatefulWidget {
       required this.questions});
 
   @override
-  State<CourseDetailPage> createState() => _CourseDetailPageState();
+  State<PastQuestionScreen> createState() => _PastQuestionScreenState();
 }
 
-class _CourseDetailPageState extends State<CourseDetailPage> {
+class _PastQuestionScreenState extends State<PastQuestionScreen> {
   String selectedFilter = "long"; // Initial filter set to "long"
   Map<String, dynamic> selectedCourse = {};
   List<dynamic> questionList = [];
