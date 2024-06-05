@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:past_qns/constants/colors.dart';
@@ -55,7 +54,7 @@ class _CourseDetailPageState extends State<CourseDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // title: Text("Past Questions"),
+          title: const Text("appname_syllabus_past_qns"),
           ),
       body: questionList.isNotEmpty
           ? Padding(
