@@ -19,6 +19,7 @@ class SyllabusScreen extends StatefulWidget {
 
 class _SyllabusScreenState extends State<SyllabusScreen> {
   List<dynamic> filteredCourseSyllabus = [];
+  String _searchText = "";
 
   @override
   void initState() {
@@ -28,6 +29,8 @@ class _SyllabusScreenState extends State<SyllabusScreen> {
 
   void onSearchTextChanged(String searchText) {
     setState(() {
+
+      _searchText = searchText;
       filteredCourseSyllabus = widget.courseSyllabus
           .where((syllabus) =>
               syllabus["content"].toLowerCase().contains(searchText.toLowerCase()) ||
@@ -104,7 +107,9 @@ class _SyllabusScreenState extends State<SyllabusScreen> {
                       return SyllabusTopicCard(
                           topic: topic,
                           topicContent: topicContent,
-                          teachingHours: teachingHours);
+                          teachingHours: teachingHours,
+                          searchText: _searchText,
+                          );
                     },
                   ),
                 ],

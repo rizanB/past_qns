@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class SyllabusTopicCard extends StatelessWidget {
+  final String topic;
+  final String topicContent;
+  final int teachingHours;
+  final String searchText; // Add searchText parameter
+
   const SyllabusTopicCard({
     super.key,
     required this.topic,
     required this.topicContent,
     required this.teachingHours,
+    required this.searchText, // Pass searchText from parent widget
   });
-
-  final String topic;
-  final String topicContent;
-  final int teachingHours;
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +42,13 @@ class SyllabusTopicCard extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Flexible(child: Text(topic,
-                          style: const TextStyle(fontSize: 16,
-                            fontWeight: FontWeight.w600),
-                        )),
+                        Flexible(
+                          child: Text(
+                            topic,
+                            style: const TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(8.0, 0, 0, 0),
                           child: Text(
@@ -54,7 +59,12 @@ class SyllabusTopicCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(topicContent),
+                    const SizedBox(
+                        height: 4.0), // Add some space before content
+                    RichText(
+                      text: highlightText(topicContent,
+                          searchText), // Call highlightText function
+                    ),
                   ],
                 ),
               ),
@@ -64,4 +74,45 @@ class SyllabusTopicCard extends StatelessWidget {
       ),
     );
   }
+
+  TextSpan highlightText(String topicContent, String searchText) {
+  if (searchText.length < 2) {
+    return TextSpan(
+      text: topicContent,
+      style: const TextStyle(fontSize: 16.0),
+    );
+  }
+
+  final lowercaseContent = topicContent.toLowerCase();
+  final lowercaseSearch = searchText.toLowerCase();
+
+  final parts = lowercaseContent.split(RegExp(lowercaseSearch, caseSensitive: false));
+  final highlightedParts = <TextSpan>[];
+
+  int index = 0;
+  for (final part in parts) {
+    if (index < parts.length - 1) {
+      highlightedParts.add(TextSpan(
+        text: topicContent.substring(index, index + part.length),
+        style: const TextStyle(fontSize: 16.0),
+      ));
+      highlightedParts.add(TextSpan(
+        text: lowercaseSearch,
+        style: const TextStyle(
+          fontSize: 16.0,
+          color: Colors.black,
+          backgroundColor: Colors.yellow,
+        ),
+      ));
+    } else {
+      highlightedParts.add(TextSpan(
+        text: topicContent.substring(index),
+        style: const TextStyle(fontSize: 16.0),
+      ));
+    }
+    index += part.length + lowercaseSearch.length;
+  }
+
+  return TextSpan(children: highlightedParts);
+}
 }
