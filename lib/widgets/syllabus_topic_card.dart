@@ -62,8 +62,10 @@ class SyllabusTopicCard extends StatelessWidget {
                     const SizedBox(
                         height: 4.0), // Add some space before content
                     RichText(
-                      text: highlightText(topicContent,
-                          searchText), // Call highlightText function
+                      text: highlightText(
+                        topicContent,
+                        searchText,
+                      ), // Call highlightText function
                     ),
                   ],
                 ),
@@ -76,43 +78,44 @@ class SyllabusTopicCard extends StatelessWidget {
   }
 
   TextSpan highlightText(String topicContent, String searchText) {
-  if (searchText.length < 2) {
-    return TextSpan(
-      text: topicContent,
-      style: const TextStyle(fontSize: 16.0),
-    );
-  }
-
-  final lowercaseContent = topicContent.toLowerCase();
-  final lowercaseSearch = searchText.toLowerCase();
-
-  final parts = lowercaseContent.split(RegExp(lowercaseSearch, caseSensitive: false));
-  final highlightedParts = <TextSpan>[];
-
-  int index = 0;
-  for (final part in parts) {
-    if (index < parts.length - 1) {
-      highlightedParts.add(TextSpan(
-        text: topicContent.substring(index, index + part.length),
-        style: const TextStyle(fontSize: 16.0),
-      ));
-      highlightedParts.add(TextSpan(
-        text: lowercaseSearch,
-        style: const TextStyle(
-          fontSize: 16.0,
-          color: Colors.black,
-          backgroundColor: Colors.yellow,
-        ),
-      ));
-    } else {
-      highlightedParts.add(TextSpan(
-        text: topicContent.substring(index),
-        style: const TextStyle(fontSize: 16.0),
-      ));
+    if (searchText.length < 2) {
+      return TextSpan(
+        text: topicContent,
+        style: const TextStyle(fontSize: 16.0, color: Colors.black),
+      );
     }
-    index += part.length + lowercaseSearch.length;
-  }
 
-  return TextSpan(children: highlightedParts);
-}
+    final lowercaseContent = topicContent.toLowerCase();
+    final lowercaseSearch = searchText.toLowerCase();
+
+    final parts =
+        lowercaseContent.split(RegExp(lowercaseSearch, caseSensitive: false));
+    final highlightedParts = <TextSpan>[];
+
+    int index = 0;
+    for (final part in parts) {
+      if (index < parts.length - 1) {
+        highlightedParts.add(TextSpan(
+          text: topicContent.substring(index, index + part.length),
+          style: const TextStyle(fontSize: 16.0, color: Colors.black),
+        ));
+        highlightedParts.add(TextSpan(
+          text: lowercaseSearch,
+          style: const TextStyle(
+            fontSize: 16.0,
+            color: Colors.black,
+            backgroundColor: Colors.yellow,
+          ),
+        ));
+      } else {
+        highlightedParts.add(TextSpan(
+          text: topicContent.substring(index),
+          style: const TextStyle(fontSize: 16.0, color: Colors.black),
+        ));
+      }
+      index += part.length + lowercaseSearch.length;
+    }
+
+    return TextSpan(children: highlightedParts);
+  }
 }
