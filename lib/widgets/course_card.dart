@@ -20,14 +20,19 @@ class CourseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        final selectedCourse = courses.firstWhere((course) =>
+            course['course_id'] == course_id); // Find the selected course
+        final courseName = selectedCourse["course_name"].toString();
+        final courseCode = selectedCourse["course_code"].toString();
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PastQuestionScreen(
-                course_id: course_id,
-                course_code: course_code,
-                course_name: course_name,
-                questions: questions),
+            builder: (context) => SyllabusScreen(
+              courseSyllabus:
+                  selectedCourse['course_syllabus'] as List<dynamic>,
+              courseName: courseName,
+              courseCode: courseCode,
+            ),
           ),
         );
       },
@@ -35,84 +40,65 @@ class CourseCard extends StatelessWidget {
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         color: Colors.grey[200],
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: IntrinsicHeight(
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      child: Text(
-                        course_name,
-                        textAlign: TextAlign.right,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
+        child: IntrinsicHeight(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Flexible(
+                flex: 1,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(6, 8, 8, 0),
+                  child: Text(
+                    course_name,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14.0,
                     ),
                   ),
-                  const SizedBox(height: 6.0),
-                  Row(
-                    children: [
-                      const Spacer(),
-                      const Icon(Icons.help_outline),
-                      const SizedBox(width: 4.0),
-                      Text(
-                        "$questions questions",
-                        style: const TextStyle(
-                            fontSize: 12.0), // Adjust question text size
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                ),
+              ),
+              // Row(
+              //   children: [
+              //     const Spacer(),
+              //     const Icon(Icons.help_outline),
+              //     const SizedBox(width: 4.0),
+              //     Text(
+              //       "$questions questions",
+              //       style: const TextStyle(
+              //           fontSize: 12.0), // Adjust question text size
+              //     ),
+              //   ],
+              // ),
+              Flexible(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 0.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Icon(Icons.my_library_books_outlined),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextButton(
-                          onPressed: () {
-                            final selectedCourse = courses.firstWhere(
-                                (course) =>
-                                    course['course_id'] ==
-                                    course_id); // Find the selected course
-
-                             // Access syllabus data
-
-                            final courseName =
-                                selectedCourse["course_name"].toString();
-
-                            final courseCode =
-                                selectedCourse["course_code"].toString();
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SyllabusScreen(
-                                  courseSyllabus:  selectedCourse[
-                                'course_syllabus'] as List<dynamic>,
-                                  courseName: courseName,
-                                  courseCode: courseCode,
-                                ),
-                              ),
-                            );
-                          },
-                          child: const Text("Syllabus",
-                              style: TextStyle(
-                                  fontSize: 14.0)),
-                        ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PastQuestionScreen(
+                                  course_id: course_id,
+                                  course_code: course_code,
+                                  course_name: course_name,
+                                  questions: questions),
+                            ),
+                          );
+                        },
+                        child: const Text("Past Questions",
+                            style: TextStyle(fontSize: 14.0)),
                       )
                     ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
