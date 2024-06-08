@@ -54,7 +54,7 @@ class _PastQuestionScreenState extends State<PastQuestionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("appname_syllabus_past_qns"),
+          title: const Text("Shodh"),
           ),
       body: questionList.isNotEmpty
           ? Padding(

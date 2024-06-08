@@ -43,7 +43,7 @@ class _SyllabusScreenState extends State<SyllabusScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("appname_syllabus_past_qns"),
+        title: const Text("Shodh"),
       ),
       body: widget.courseSyllabus.isNotEmpty
           ? Padding(

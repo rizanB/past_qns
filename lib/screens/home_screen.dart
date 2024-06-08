@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("appname_syllabus_past_qns",
+        title: const Text("Shodh",
             style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold)),
       ),
       body: Padding(
