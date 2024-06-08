@@ -1,4 +1,4 @@
-package com.example.past_qns
+package com.zeroequalsone.shodh
 
 import io.flutter.embedding.android.FlutterActivity
 
