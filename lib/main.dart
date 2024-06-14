@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:past_qns/providers/course_provider.dart';
+import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -10,9 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: ChangeNotifierProvider(
+        create: (context) => CourseProvider(),
+        child: const HomeScreen()),
     );
   }
 }
