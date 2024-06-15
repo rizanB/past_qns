@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:past_qns/providers/course_provider.dart';
+import 'package:past_qns/providers/relevant_courses_provider.dart';
 import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ChangeNotifierProvider(
-        create: (context) => CourseProvider(),
+        create: (context) => RelevantCoursesProvider(),
         child: const HomeScreen()),
     );
   }

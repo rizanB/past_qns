@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:past_qns/providers/course_provider.dart';
-// import 'package:past_qns/data/courses.dart';
+import 'package:past_qns/providers/relevant_courses_provider.dart';
 import 'package:past_qns/widgets/course_card.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: const Text("Shodh",
@@ -18,9 +18,13 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-        child: Consumer<CourseProvider>(
+        child: Consumer<RelevantCoursesProvider>(
           builder: (context, provider, child) {
+
+            print(provider.relevantCourses);
           return GridView.count(
+
+            
             crossAxisCount: 2, // Two columns
             mainAxisSpacing: 10.0, // Spacing between cards
             crossAxisSpacing: 8.0, // Spacing between columns

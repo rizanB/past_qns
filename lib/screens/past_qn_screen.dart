@@ -167,7 +167,7 @@ class _PastQuestionScreenState extends State<PastQuestionScreen> {
                 ],
               ),
             )
-          : Center(
+          : const Center(
               child: Text('No questions found for this course'),
             ),
     );

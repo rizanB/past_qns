@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CourseProvider with ChangeNotifier {
+class RelevantCoursesProvider with ChangeNotifier {
   List _relevantCourses = [
     {
-      "course_name": "Micro Third Year",
-      "course_id": 2,
+      "course_name": "micro subject 1",
+      "course_id": 1,
       "course_code": "mb-333",
       "course_syllabus": [
         {
-          'topic': "Microbio 3rd year course 1",
+          'topic': "micro subject1",
           'content': "Microbio is good subject..",
           'hours': 2
         },
@@ -27,13 +27,13 @@ class CourseProvider with ChangeNotifier {
       ]
     },
     {
-      "course_name": "Chemistry Third Year",
+      "course_name": "micro subject2",
       "course_id": 2,
       "course_code": "mb-333",
       "course_syllabus": [
         {
-          'topic': "course 2 micro",
-          'content': "Microbio is good subject..",
+          'topic': "course 2 chemm",
+          'content': "chemm is good subject..",
           'hours': 2
         },
         {
@@ -114,12 +114,12 @@ class CourseProvider with ChangeNotifier {
       case "tu_microbio_3rd_year":
         _relevantCourses = [
           {
-            "course_name": "Micro Third Year",
-            "course_id": 2,
+            "course_name": "micro subject1",
+            "course_id": 1,
             "course_code": "mb-333",
             "course_syllabus": [
               {
-                'topic': "Microbio 3rd year course 1",
+                'topic': "subject 1",
                 'content': "Microbio is good subject..",
                 'hours': 2
               },
@@ -139,12 +139,12 @@ class CourseProvider with ChangeNotifier {
             ]
           },
           {
-            "course_name": "Chemistry Third Year",
+            "course_name": "micro subject2",
             "course_id": 2,
             "course_code": "mb-333",
             "course_syllabus": [
               {
-                'topic': "course 2 micro",
+                'topic': "course 2 chenmmmm",
                 'content': "Microbio is good subject..",
                 'hours': 2
               },
@@ -168,8 +168,8 @@ class CourseProvider with ChangeNotifier {
       default:
         _relevantCourses = [
           {
-            "course_name": "Micro Third Year",
-            "course_id": 2,
+            "course_name": "micro subject1",
+            "course_id": 1,
             "course_code": "mb-333",
             "course_syllabus": [
               {
@@ -193,7 +193,7 @@ class CourseProvider with ChangeNotifier {
             ]
           },
           {
-            "course_name": "Chemistry Third Year",
+            "course_name": "micro subject2",
             "course_id": 2,
             "course_code": "mb-333",
             "course_syllabus": [
